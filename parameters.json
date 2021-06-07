@@ -1,0 +1,114 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "resourceGroupPrefix": {
+        "value": "test12343344132-test-RG-WVD-BICEP-WVD-"
+      },
+      "hostpoolName": {
+        "value": "myBicepHostpool"
+      },
+      "hostpoolFriendlyName": {
+        "value": "My Bicep deployed Hostpool"
+      },
+      "appgroupName": {
+        "value": "myBicepAppGroup"
+      },
+      "appgroupNameFriendlyName": {
+        "value": "My Bicep deployed Appgroup"
+      },
+      "workspaceName": {
+        "value": "myWVDWorkspace"
+      },
+      "workspaceNameFriendlyName": {
+        "value": "My Bicep deployed Workspace"
+      },
+      "preferredAppGroupType": {
+        "value": "Desktop"
+      },
+      "wvdbackplanelocation": {
+        "value": "eastus"
+      },
+      "hostPoolType": {
+        "value": "pooled"
+      },
+      "loadBalancerType": {
+        "value": "BreadthFirst"
+      },
+      "logAnalyticsWorkspaceName": {
+        "value": "test12343344132myWVDLAWorkspace"
+      },
+      "logAnalyticsLocation": {
+        "value": "ukwest"
+      },
+      "azureSubscriptionID": {
+        "value": "2ad35d19-d4b2-48f6-a570-efdb1e5e754f"
+      },
+      "automationaccountname": {
+        "value": "test12343344132myWVDAutoaccount"
+      },
+      "sigName": {
+        "value": "test12343344132mywvdgallery"
+      },
+      "sigLocation": {
+        "value": "uksouth"
+      },
+      "imagePublisher": {
+        "value": "microsoftwindowsdesktop"
+      },
+      "imageDefinitionName": {
+        "value": "mywvdimage"
+      },
+      "imageOffer": {
+        "value": "office-365"
+      },
+      "imageSKU": {
+        "value": "21h1-evd-o365pp"
+      },
+      "imageLocation": {
+        "value": "uksouth"
+      },
+      "roleNameGalleryImage": {
+        "value": "test12343344132wvdimagemanager"
+      },
+      "templateImageResourceGroup": {
+        "value": "test12343344132mywvdgallery"
+      },
+      "useridentity": {
+        "value": "test12343344132user"
+      },
+      "vnetName": {
+        "value": "bicep-vnet"
+      },
+      "vnetaddressPrefix": {
+        "value": "10.0.0.0/15"
+      },
+      "subnetPrefix": {
+        "value": "10.0.1.0/24"
+      },
+      "vnetLocation": {
+        "value": "uksouth"
+      },
+      "subnetName": {
+        "value": "bicep-subnet"
+      },
+      "storageaccountlocation": {
+        "value": "uksouth"
+      },
+      "storageaccountName": {
+        "value": "tes43344132bicepsa"
+      },
+      "storageaccountkind": {
+        "value": "FileStorage"
+      },
+      "storageaccountkindblob": {
+        "value": "BlobStorage"
+      },
+      "storgeaccountglobalRedundancy": {
+        "value": "Premium_LRS"
+      },
+      "fileshareFolderName": {
+            "value": "profilecontainers"
+      }
+    }
+  }
