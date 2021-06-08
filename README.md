@@ -1,4 +1,4 @@
-My WVD Bicep creation script
+My AVD Bicep creation script
 Running main with the params file creates
 Automation Account for use with powershell scripts
 App Group

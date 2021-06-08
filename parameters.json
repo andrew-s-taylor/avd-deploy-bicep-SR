@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "resourceGroupPrefix": {
-        "value": "test12343344132-test-RG-WVD-BICEP-WVD-"
+        "value": "test12343344132-test-RG-AVD-BICEP-AVD-"
       },
       "hostpoolName": {
         "value": "myBicepHostpool"
@@ -18,7 +18,7 @@
         "value": "My Bicep deployed Appgroup"
       },
       "workspaceName": {
-        "value": "myWVDWorkspace"
+        "value": "myAVDWorkspace"
       },
       "workspaceNameFriendlyName": {
         "value": "My Bicep deployed Workspace"
@@ -26,7 +26,7 @@
       "preferredAppGroupType": {
         "value": "Desktop"
       },
-      "wvdbackplanelocation": {
+      "avdbackplanelocation": {
         "value": "eastus"
       },
       "hostPoolType": {
@@ -36,7 +36,7 @@
         "value": "BreadthFirst"
       },
       "logAnalyticsWorkspaceName": {
-        "value": "test12343344132myWVDLAWorkspace"
+        "value": "test12343344132myAVDLAWorkspace"
       },
       "logAnalyticsLocation": {
         "value": "ukwest"
@@ -45,10 +45,10 @@
         "value": "2ad35d19-d4b2-48f6-a570-efdb1e5e754f"
       },
       "automationaccountname": {
-        "value": "test12343344132myWVDAutoaccount"
+        "value": "test12343344132myAVDAutoaccount"
       },
       "sigName": {
-        "value": "test12343344132mywvdgallery"
+        "value": "test12343344132myavdgallery"
       },
       "sigLocation": {
         "value": "uksouth"
@@ -57,7 +57,7 @@
         "value": "microsoftwindowsdesktop"
       },
       "imageDefinitionName": {
-        "value": "mywvdimage"
+        "value": "myavdimage"
       },
       "imageOffer": {
         "value": "office-365"
@@ -69,10 +69,10 @@
         "value": "uksouth"
       },
       "roleNameGalleryImage": {
-        "value": "test12343344132wvdimagemanager"
+        "value": "test12343344132avdimagemanager"
       },
       "templateImageResourceGroup": {
-        "value": "test12343344132mywvdgallery"
+        "value": "test12343344132myavdgallery"
       },
       "useridentity": {
         "value": "test12343344132user"

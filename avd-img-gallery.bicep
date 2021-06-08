@@ -14,14 +14,14 @@ param resourcegroupimg string
 var templateImageResourceGroupId = '/subscriptions/${azureSubscriptionID}/resourcegroups/${templateImageResourceGroup}'
 var imageDefinitionFullName = '${sigName}/${imageDefinitionName}'
 
-//Create Shard Image Gallery
-resource wvdsig 'Microsoft.Compute/galleries@2020-09-30' = {
+//Create Shared Image Gallery
+resource avdsig 'Microsoft.Compute/galleries@2020-09-30' = {
   name: sigName
   location: sigLocation
 }
 
-//Create Image definitation
-resource wvdid 'Microsoft.Compute/galleries/images@2020-09-30' = {
+//Create Image definition
+resource avdid 'Microsoft.Compute/galleries/images@2020-09-30' = {
   name: imageDefinitionFullName
   location: sigLocation
   properties: {
@@ -34,12 +34,12 @@ resource wvdid 'Microsoft.Compute/galleries/images@2020-09-30' = {
     }
   }
   dependsOn: [
-    wvdsig
+    avdsig
   ]
 }
 
 //Create Identity
-resource wvdidentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
+resource avdidentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
   name: useridentity
   tags: {}
   location: sigLocation
@@ -53,7 +53,7 @@ resource gallerydef 'Microsoft.Authorization/roleDefinitions@2018-01-01-preview'
   name: guid(roleNameGalleryImage)
   properties: {
     roleName: roleNameGalleryImage
-    description: 'Custom WVD Image Gallery Role'
+    description: 'Custom AVD Image Gallery Role'
     permissions: [
       {
         actions: [
