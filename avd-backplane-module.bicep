@@ -65,7 +65,7 @@ resource agvalid 'Microsoft.DesktopVirtualization/applicationgroups@2019-12-10-p
   properties: {
     friendlyName: appgroupNameFriendlyNamevalid
     applicationGroupType: applicationgrouptype
-    hostPoolArmPath: hp.id
+    hostPoolArmPath: hpvalid.id
   }
 }
 
@@ -88,7 +88,7 @@ resource wsvalid 'Microsoft.DesktopVirtualization/workspaces@2019-12-10-preview'
   properties: {
     friendlyName: workspaceNameFriendlyNamevalid
     applicationGroupReferences: [
-      ag.id
+      agvalid.id
     ]
   }
 }

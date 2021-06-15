@@ -38,49 +38,7 @@ resource avdid 'Microsoft.Compute/galleries/images@2020-09-30' = {
   ]
 }
 
-//Create Identity
-resource avdidentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
-  name: useridentity
-  tags: {}
-  location: sigLocation
-}
 
-
-var roleid = guid(useridentity)
-//create role definition
-
-resource gallerydef 'Microsoft.Authorization/roleDefinitions@2018-01-01-preview' = {
-  name: guid(roleNameGalleryImage)
-  properties: {
-    roleName: roleNameGalleryImage
-    description: 'Custom AVD Image Gallery Role'
-    permissions: [
-      {
-        actions: [
-          'Microsoft.Compute/galleries/read'
-          'Microsoft.Compute/galleries/images/read'
-          'Microsoft.Compute/galleries/images/versions/read'
-          'Microsoft.Compute/galleries/images/versions/write'
-          'Microsoft.Compute/images/write'
-          'Microsoft.Compute/images/read'
-          'Microsoft.Compute/images/delete'
-        ]
-      }
-    ]
-    assignableScopes: [
-      resourcegroupimg
-    ]
-  }
-}
-
-var galleryname = guid(templateImageResourceGroup)
-resource galleryassign 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
-    name: galleryname
-    properties: {
-      roleDefinitionId: gallerydef.id
-      principalId: roleid
-    }
-  }
 
 
 
